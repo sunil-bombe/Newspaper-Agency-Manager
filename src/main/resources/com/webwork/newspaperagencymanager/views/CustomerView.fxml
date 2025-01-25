@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml">
+  <center>
+    <TableView fx:id="customerTable">
+      <columns>
+        <TableColumn text="Name" />
+        <TableColumn text="Contact" />
+        <TableColumn text="Subscription Details" />
+      </columns>
+    </TableView>
+  </center>
+  <bottom>
+    <HBox spacing="10" alignment="CENTER">
+      <Button text="Add" />
+      <Button text="Edit" />
+      <Button text="Delete" />
+      <Button text="Export to Excel" />
+    </HBox>
+  </bottom>
+</BorderPane>
