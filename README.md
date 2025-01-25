@@ -78,4 +78,3 @@
 ---
 
 ## Example Projects
-While I don't develop standalone applications, I can provide references or technical guidance for similar projects. For example, CRM systems or billing applications developed in **Java** with **MySQL** are analogous in design.
