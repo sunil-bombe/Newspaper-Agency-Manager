@@ -14,4 +14,5 @@ module com.webwork.newspaperagencymanager {
 
   opens com.webwork.newspaperagencymanager to javafx.fxml;
   exports com.webwork.newspaperagencymanager;
+
 }

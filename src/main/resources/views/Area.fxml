@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.webwork.newspaperagencymanager.controller.AreaController">
+  <top>
+    <Label text="Area Management" style="-fx-font-size: 20px;" />
+  </top>
+  <center>
+    <TableView fx:id="areaTable">
+      <columns>
+        <TableColumn text="Area Name" />
+        <TableColumn text="Linked Customers" />
+      </columns>
+    </TableView>
+  </center>
+  <bottom>
+    <HBox spacing="10" alignment="CENTER">
+      <Button text="Add Area" onAction="#handleAddArea" />
+      <Button text="Edit Area" onAction="#handleEditArea" />
+      <Button text="Delete Area" onAction="#handleDeleteArea" />
+    </HBox>
+  </bottom>
+</BorderPane>

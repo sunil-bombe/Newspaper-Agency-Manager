@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.webwork.newspaperagencymanager.controller.DashboardController">
+  <top>
+    <Label text="Dashboard" style="-fx-font-size: 24px; -fx-padding: 10;" />
+  </top>
+  <center>
+    <VBox spacing="10" alignment="CENTER">
+      <Button text="Manage Customers" onAction="#openCustomerManagement" />
+      <Button text="Manage Hawkers" onAction="#openHawkerManagement" />
+      <Button text="Manage Areas" onAction="#openAreaManagement" />
+      <Button text="Generate Bills" onAction="#openBilling" />
+    </VBox>
+  </center>
+</BorderPane>

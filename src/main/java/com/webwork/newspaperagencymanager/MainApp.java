@@ -11,7 +11,7 @@ public class MainApp extends Application {
 
   @Override
   public void start(Stage primaryStage) throws Exception {
-    FXMLLoader loader = new FXMLLoader(getClass().getResource("com/webwork/newspaperagencymanager/views/CustomerView.fxml"));
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/CustomerView.fxml"));
     Scene scene = new Scene(loader.load());
     primaryStage.setScene(scene);
     primaryStage.setTitle("Newspaper Agency Manager");

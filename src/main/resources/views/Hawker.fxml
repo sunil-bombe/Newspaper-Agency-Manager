@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.webwork.newspaperagencymanager.controller.HawkerController">
+  <top>
+    <Label text="Hawker Management" style="-fx-font-size: 20px;" />
+  </top>
+  <center>
+    <TableView fx:id="hawkerTable">
+      <columns>
+        <TableColumn text="Name" />
+        <TableColumn text="Contact" />
+        <TableColumn text="Delivery Routes" />
+      </columns>
+    </TableView>
+  </center>
+  <bottom>
+    <HBox spacing="10" alignment="CENTER">
+      <Button text="Add" onAction="#handleAddHawker" />
+      <Button text="Edit" onAction="#handleEditHawker" />
+      <Button text="Delete" onAction="#handleDeleteHawker" />
+      <Button text="Export to Excel" onAction="#handleExport" />
+    </HBox>
+  </bottom>
+</BorderPane>
