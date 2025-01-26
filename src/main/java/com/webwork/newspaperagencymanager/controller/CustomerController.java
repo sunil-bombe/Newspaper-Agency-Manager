@@ -151,4 +151,30 @@ public class CustomerController {
     alert.setContentText(message);
     alert.showAndWait();
   }
+
+
+  @FXML
+  private void navigateToDashboard(ActionEvent event) {
+    try {
+      // Load the Dashboard FXML
+      FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/Dashboard.fxml"));
+      Parent dashboardView = loader.load();
+
+      // Get the current stage and set the scene to the Dashboard
+      Scene currentScene = ((Node) event.getSource()).getScene();
+      currentScene.setRoot(dashboardView);
+
+    } catch (IOException e) {
+      e.printStackTrace();
+      showAlertError("Error", "Unable to load Dashboard screen.");
+    }
+  }
+
+  private void showAlertError(String title, String message) {
+    javafx.scene.control.Alert alert = new javafx.scene.control.Alert(javafx.scene.control.Alert.AlertType.ERROR);
+    alert.setTitle(title);
+    alert.setContentText(message);
+    alert.showAndWait();
+  }
+
 }

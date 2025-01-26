@@ -1,0 +1,91 @@
+/* login.css */
+
+/* Style the root BorderPane to ensure the page is fixed-size */
+.root {
+    -fx-pref-width: 800px;
+    -fx-pref-height: 600px;
+    -fx-background-color: #f0f0f0; /* Light grey background */
+}
+
+/* Center container styling */
+.center {
+    -fx-alignment: center;
+    -fx-padding: 20px;
+}
+
+/* VBox styling (main form container) */
+.vbox {
+    -fx-alignment: center;
+    -fx-spacing: 20px;
+    -fx-background-color: #ffffff; /* White background */
+    -fx-padding: 40px;
+    -fx-border-radius: 8px;
+    -fx-effect: innershadow(gaussian, #000000, 10, 0.5, 2, 2); /* Soft inner shadow effect */
+}
+
+/* Login label styling */
+.label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333; /* Dark text */
+}
+
+/* Label styling for "Username" and "Password" fields */
+.hbox .label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #555555;
+}
+
+/* TextField styling */
+.text-field {
+    -fx-pref-width: 250px;
+    -fx-font-size: 14px;
+    -fx-border-radius: 4px;
+    -fx-background-color: #f4f4f4;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-padding: 5px;
+}
+
+/* PasswordField styling */
+.password-field {
+    -fx-pref-width: 250px;
+    -fx-font-size: 14px;
+    -fx-border-radius: 4px;
+    -fx-background-color: #f4f4f4;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-padding: 5px;
+}
+
+/* Error label styling */
+#errorLabel {
+    -fx-text-fill: red;
+    -fx-font-size: 14px;
+    -fx-font-style: italic;
+}
+
+/* Button styling */
+.button {
+    -fx-font-size: 14px;
+    -fx-background-color: #4CAF50; /* Green background */
+    -fx-text-fill: white;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #45a049; /* Slightly darker green when hovered */
+}
+
+.button:pressed {
+    -fx-background-color: #3e8e41; /* Darker green when pressed */
+}
+
+/* Style the login window */
+.login-page {
+    -fx-alignment: center;
+    -fx-background-color: #f0f0f0; /* Light grey background for the page */
+}

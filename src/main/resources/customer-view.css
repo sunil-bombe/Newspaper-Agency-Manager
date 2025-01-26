@@ -1,0 +1,117 @@
+/* General Layout */
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: #f7f7f7;
+}
+
+/* Header */
+.hbox {
+    -fx-background-color: #e0e0e0; /* Light grey */
+    -fx-padding: 10;
+    -fx-spacing: 15;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.hbox .button {
+    -fx-background-color: #ffffff; /* White button */
+    -fx-text-fill: #4a4a4a; /* Neutral grey text */
+    -fx-font-weight: bold;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5 15;
+    -fx-cursor: hand;
+}
+
+.hbox .button:hover {
+    -fx-background-color: #cfcfcf; /* Light hover effect */
+}
+
+.hbox .label {
+    -fx-text-fill: #333333; /* Dark grey text */
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+/* TableView */
+.table-view {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5;
+    -fx-padding: 10;
+    -fx-alternate-row-fill-visible: true;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f0f0f0; /* Soft grey for header */
+    -fx-text-fill: #333333; /* Dark grey text */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-border-color: #dcdcdc;
+}
+
+.table-view .cell {
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+    -fx-text-fill: #4a4a4a;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9; /* Light grey for odd rows */
+}
+
+.table-row-cell:even {
+    -fx-background-color: #ffffff; /* White for even rows */
+}
+
+/* Footer Buttons */
+.hbox .button {
+    -fx-background-color: #e0e0e0; /* Light grey buttons */
+    -fx-text-fill: #4a4a4a; /* Neutral text */
+    -fx-font-weight: bold;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 8 15;
+    -fx-cursor: hand;
+}
+
+.hbox .button:hover {
+    -fx-background-color: #d0d0d0; /* Subtle hover effect */
+}
+
+/* Specific Button Colors */
+.button[text="Add"] {
+    -fx-background-color: #d9ead3; /* Soft green */
+    -fx-text-fill: #274e13; /* Dark green text */
+}
+
+.button[text="Add"]:hover {
+    -fx-background-color: #b6d7a8; /* Slightly darker green */
+}
+
+.button[text="Edit"] {
+    -fx-background-color: #fff2cc; /* Soft yellow */
+    -fx-text-fill: #7f6000; /* Dark yellow text */
+}
+
+.button[text="Edit"]:hover {
+    -fx-background-color: #ffe599; /* Slightly darker yellow */
+}
+
+.button[text="Delete"] {
+    -fx-background-color: #f4cccc; /* Soft red */
+    -fx-text-fill: #990000; /* Dark red text */
+}
+
+.button[text="Delete"]:hover {
+    -fx-background-color: #ea9999; /* Slightly darker red */
+}
+
+.button[text="Export to Excel"] {
+    -fx-background-color: #cfe2f3; /* Soft blue */
+    -fx-text-fill: #073763; /* Dark blue text */
+}
+
+.button[text="Export to Excel"]:hover {
+    -fx-background-color: #9fc5e8; /* Slightly darker blue */
+}

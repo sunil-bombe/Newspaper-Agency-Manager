@@ -24,7 +24,7 @@ public class LoginController {
     if (username.equals("Admin") && password.equals("admin123")) {
       // Navigate to Customer View page
       try {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/CustomerView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/Dashboard.fxml"));
         Parent root = loader.load();
 
         Stage stage = (Stage) usernameField.getScene().getWindow(); // Get current stage

@@ -2,16 +2,47 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.webwork.newspaperagencymanager.controller.DashboardController">
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.webwork.newspaperagencymanager.controller.DashboardController" stylesheets="/dashboard.css">
+  <!-- Top Section: Dashboard Title -->
   <top>
-    <Label text="Dashboard" style="-fx-font-size: 24px; -fx-padding: 10;" />
+    <Label text="Dashboard" styleClass="dashboard-title" />
   </top>
+
+  <!-- Center Section: KPI Cards and Buttons -->
   <center>
-    <VBox spacing="10" alignment="CENTER">
-      <Button text="Manage Customers" onAction="#openCustomerManagement" />
-      <Button text="Manage Hawkers" onAction="#openHawkerManagement" />
-      <Button text="Manage Areas" onAction="#openAreaManagement" />
-      <Button text="Generate Bills" onAction="#openBilling" />
+    <VBox alignment="TOP_CENTER" spacing="20" styleClass="dashboard-container">
+      <!-- KPI Section -->
+      <HBox alignment="CENTER" spacing="15">
+        <VBox styleClass="kpi-card">
+          <Label text="Total Customers" styleClass="kpi-title" />
+          <Label text="1,234" styleClass="kpi-value" />
+        </VBox>
+        <VBox styleClass="kpi-card">
+          <Label text="Total Hawkers" styleClass="kpi-title" />
+          <Label text="567" styleClass="kpi-value" />
+        </VBox>
+        <VBox styleClass="kpi-card">
+          <Label text="Total Areas" styleClass="kpi-title" />
+          <Label text="45" styleClass="kpi-value" />
+        </VBox>
+        <VBox styleClass="kpi-card">
+          <Label text="Bills Generated" styleClass="kpi-title" />
+          <Label text="789" styleClass="kpi-value" />
+        </VBox>
+      </HBox>
+
+      <!-- Action Buttons Section -->
+      <HBox alignment="CENTER" spacing="15">
+        <Button text="Manage Customers" onAction="#openCustomerManagement" styleClass="dashboard-button" />
+        <Button text="Manage Hawkers" onAction="#openHawkerManagement" styleClass="dashboard-button" />
+        <Button text="Manage Areas" onAction="#openAreaManagement" styleClass="dashboard-button" />
+        <Button text="Generate Bills" onAction="#openBilling" styleClass="dashboard-button" />
+      </HBox>
     </VBox>
   </center>
+
+  <!-- Bottom Section: Footer (Optional) -->
+  <bottom>
+    <Label text="© 2025 Your Company Name" styleClass="dashboard-footer" />
+  </bottom>
 </BorderPane>

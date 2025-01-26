@@ -2,9 +2,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.webwork.newspaperagencymanager.controller.CustomerController" >
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.webwork.newspaperagencymanager.controller.CustomerController" stylesheets="/customer-view.css" >
   <top>
-    <Label text="Customer Management" style="-fx-font-size: 20px; -fx-padding: 10;" />
+    <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 10;">
+      <Button text="Home" onAction="#navigateToDashboard" />
+      <Label text="Customer Management" style="-fx-font-size: 20px;" />
+    </HBox>
   </top>
   <center>
     <TableView fx:id="customerTable" prefHeight="400" prefWidth="600">
