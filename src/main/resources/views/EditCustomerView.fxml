@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.webwork.newspaperagencymanager.controller.EditCustomerController">
+  <center>
+    <VBox alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+      <Label text="Edit Customer" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+      <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Name:" />
+        <TextField fx:id="nameField" prefWidth="200" />
+      </HBox>
+
+      <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Contact:" />
+        <TextField fx:id="contactField" prefWidth="200" />
+      </HBox>
+
+      <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Subscription Details:" />
+        <TextField fx:id="subscriptionField" prefWidth="200" />
+      </HBox>
+
+      <HBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+        <Button text="Save" onAction="#handleSave" />
+        <Button text="Cancel" onAction="#handleCancel" />
+      </HBox>
+    </VBox>
+  </center>
+</BorderPane>

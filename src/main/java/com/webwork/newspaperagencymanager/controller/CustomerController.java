@@ -6,9 +6,11 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.stage.FileChooser;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import java.io.File;
@@ -82,11 +84,34 @@ public class CustomerController {
   private void handleEditCustomer(ActionEvent event) {
     Customer selectedCustomer = customerTable.getSelectionModel().getSelectedItem();
     if (selectedCustomer != null) {
-      System.out.println("Edit Customer: " + selectedCustomer.getName());
+      try {
+        // Load the Edit Customer FXML
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/EditCustomerView.fxml"));
+        Parent parent = loader.load();
+
+        // Get the controller and pass the selected customer
+        EditCustomerController controller = loader.getController();
+        controller.setCustomer(selectedCustomer);
+
+        // Create a new stage for the Edit Customer screen
+        Stage stage = new Stage();
+        stage.setTitle("Edit Customer");
+        stage.setScene(new Scene(parent));
+        stage.initModality(Modality.WINDOW_MODAL);
+        stage.initOwner(((Node) event.getSource()).getScene().getWindow());
+        stage.showAndWait();
+
+        // Refresh the customer table if data is updated
+        customerTable.refresh();
+      } catch (IOException e) {
+        e.printStackTrace();
+        showAlert("Error", "Unable to load Edit Customer screen.");
+      }
     } else {
       showAlert("No customer selected", "Please select a customer to edit.");
     }
   }
+
 
   @FXML
   private void handleDeleteCustomer(ActionEvent event) {
