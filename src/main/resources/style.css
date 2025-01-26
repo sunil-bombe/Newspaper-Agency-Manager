@@ -1,0 +1,76 @@
+/* General styling for the application */
+.root {
+    -fx-font-family: "Arial, Helvetica, sans-serif";
+    -fx-background-color: #f4f4f4;
+}
+
+/* Top label styling */
+.label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-padding: 10;
+    -fx-alignment: center;
+}
+
+/* Table styling */
+.table-view {
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-background-color: #ffffff;
+    -fx-padding: 5;
+}
+
+.table-view .column-header {
+    -fx-background-color: #0078d4; /* Header background */
+    -fx-text-fill: white;         /* Header text color */
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #f9f9f9; /* Alternating row color */
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: #ffffff; /* Alternating row color */
+}
+
+.table-view .table-cell {
+    -fx-font-size: 13px;
+    -fx-padding: 8;
+    -fx-text-fill: #333333;
+}
+
+.table-view .table-cell:selected {
+    -fx-background-color: #d1e7fd; /* Highlight selected row */
+    -fx-text-fill: #000000;
+}
+
+/* Button styling */
+.button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-padding: 10 15;
+    -fx-background-color: #0078d4; /* Button background */
+    -fx-text-fill: white;          /* Button text color */
+}
+
+.button:hover {
+    -fx-background-color: #005fa3; /* Hover effect */
+}
+
+.button:pressed {
+    -fx-background-color: #003f73; /* Pressed effect */
+}
+
+/* Bottom HBox styling */
+.hbox {
+    -fx-padding: 10;
+    -fx-spacing: 15;
+    -fx-alignment: center;
+}

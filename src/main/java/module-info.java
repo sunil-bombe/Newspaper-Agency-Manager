@@ -12,7 +12,9 @@ module com.webwork.newspaperagencymanager {
   requires com.almasb.fxgl.all;
   requires java.sql;
 
-  opens com.webwork.newspaperagencymanager to javafx.fxml;
   exports com.webwork.newspaperagencymanager;
+  exports com.webwork.newspaperagencymanager.model;
+
+  opens com.webwork.newspaperagencymanager.controller to javafx.fxml;
 
 }

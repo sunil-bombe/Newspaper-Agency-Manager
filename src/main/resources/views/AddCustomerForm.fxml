@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.webwork.newspaperagencymanager.controller.AddCustomerController" spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+  <Label text="Add Customer" style="-fx-font-size: 20px;" />
+  <TextField fx:id="nameField" promptText="Enter Name" />
+  <TextField fx:id="contactField" promptText="Enter Contact" />
+  <TextField fx:id="subscriptionField" promptText="Enter Subscription Details" />
+  <HBox spacing="10">
+    <Button text="Add" onAction="#handleAdd" />
+    <Button text="Cancel" onAction="#handleCancel" />
+  </HBox>
+</VBox>

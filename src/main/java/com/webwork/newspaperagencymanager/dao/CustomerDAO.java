@@ -1,5 +1,5 @@
 package com.webwork.newspaperagencymanager.dao;
-import com.webwork.newspaperagencymanager.model.Customer;
+import com.webwork.newspaperagencymanager.model.Customer1;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -13,14 +13,14 @@ public class CustomerDAO {
   private final String user = "root";
   private final String password = "password";
 
-  public List<Customer> getAllCustomers() {
-    List<Customer> customers = new ArrayList<>();
+  public List<Customer1> getAllCustomers() {
+    List<Customer1> customers = new ArrayList<>();
     try (Connection connection = DriverManager.getConnection(url, user, password)) {
       String query = "SELECT * FROM Customer";
       Statement statement = connection.createStatement();
       ResultSet rs = statement.executeQuery(query);
       while (rs.next()) {
-        customers.add(new Customer(
+        customers.add(new Customer1(
             rs.getInt("customer_id"),
             rs.getString("name"),
             rs.getString("contact"),

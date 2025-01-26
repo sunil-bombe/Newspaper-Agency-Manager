@@ -1,57 +1,52 @@
 package com.webwork.newspaperagencymanager.model;
+import javafx.beans.property.SimpleStringProperty;
 
 public class Customer {
-  private int id;
-  private String name;
-  private String contact;
-  private String subscriptionDetails;
+  private final SimpleStringProperty name;
+  private final SimpleStringProperty contact;
+  private final SimpleStringProperty subscriptionDetails;
 
-  public Customer(int id, String name, String contact, String subscriptionDetails) {
-    this.id = id;
-    this.name = name;
-    this.contact = contact;
-    this.subscriptionDetails = subscriptionDetails;
-  }
-
-  public int getId() {
-    return id;
-  }
-
-  public void setId(int id) {
-    this.id = id;
+  public Customer(int i, String name, String contact, String subscriptionDetails) {
+    this.name = new SimpleStringProperty(name);
+    this.contact = new SimpleStringProperty(contact);
+    this.subscriptionDetails = new SimpleStringProperty(subscriptionDetails);
   }
 
   public String getName() {
+    return name.get();
+  }
+
+  public SimpleStringProperty nameProperty() {
     return name;
   }
 
   public void setName(String name) {
-    this.name = name;
+    this.name.set(name);
   }
 
   public String getContact() {
+    return contact.get();
+  }
+
+  public SimpleStringProperty contactProperty() {
     return contact;
   }
 
   public void setContact(String contact) {
-    this.contact = contact;
+    this.contact.set(contact);
   }
 
   public String getSubscriptionDetails() {
+    return subscriptionDetails.get();
+  }
+
+  public SimpleStringProperty subscriptionDetailsProperty() {
     return subscriptionDetails;
   }
 
   public void setSubscriptionDetails(String subscriptionDetails) {
-    this.subscriptionDetails = subscriptionDetails;
+    this.subscriptionDetails.set(subscriptionDetails);
   }
 
-  @Override
-  public String toString() {
-    return "Customer{" +
-        "id=" + id +
-        ", name='" + name + '\'' +
-        ", contact='" + contact + '\'' +
-        ", subscriptionDetails='" + subscriptionDetails + '\'' +
-        '}';
-  }
+
 }

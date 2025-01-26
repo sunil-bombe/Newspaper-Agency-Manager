@@ -2,10 +2,29 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="com.webwork.newspaperagencymanager.controller.LoginController">
-  <Label text="Login" style="-fx-font-size: 20px;" />
-  <TextField fx:id="usernameField" promptText="Username" />
-  <PasswordField fx:id="passwordField" promptText="Password" />
-  <Button text="Login" onAction="#handleLogin" />
-  <Label fx:id="errorLabel" textFill="red" />
-</VBox>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.webwork.newspaperagencymanager.controller.LoginController">
+  <center>
+    <VBox alignment="CENTER" spacing="15" style="-fx-padding: 40;">
+      <!-- Login Title -->
+      <Label text="Login" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+      <!-- Username Field -->
+      <HBox alignment="CENTER_LEFT" spacing="10">
+        <Label text="Username:" style="-fx-font-size: 14px;" />
+        <TextField fx:id="usernameField" prefWidth="200" promptText="Enter your username" />
+      </HBox>
+
+      <!-- Password Field -->
+      <HBox alignment="CENTER_LEFT" spacing="10">
+        <Label text="Password:" style="-fx-font-size: 14px;" />
+        <PasswordField fx:id="passwordField" prefWidth="200" promptText="Enter your password" />
+      </HBox>
+
+      <!-- Error Label -->
+      <Label fx:id="errorLabel" text="" style="-fx-text-fill: red;" />
+
+      <!-- Login Button -->
+      <Button text="Login" onAction="#handleLogin" style="-fx-font-size: 14px; -fx-padding: 5 20;" />
+    </VBox>
+  </center>
+</BorderPane>
